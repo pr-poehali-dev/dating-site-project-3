@@ -61,7 +61,31 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				coral: {
+					DEFAULT: '#FF6B6B',
+					light: '#FF8A8A',
+					dark: '#E55555',
+				},
+				teal: {
+					DEFAULT: '#4ECDC4',
+					light: '#6ED5CE',
+					dark: '#3CB8B0',
+				},
+				sky: {
+					DEFAULT: '#45B7D1',
+					light: '#67C5DB',
+					dark: '#3A9BC1',
+				},
+				purple: {
+					DEFAULT: '#2D3436',
+					light: '#636E72',
+					dark: '#1A1F2C',
+				},
+			},
+			fontFamily: {
+				sans: ['Open Sans', 'sans-serif'],
+				heading: ['Montserrat', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +108,26 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
+				},
+				'scale-in': {
+					'0%': { transform: 'scale(0.95)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' },
+				},
+				'swipe': {
+					'0%': { transform: 'translateX(0) rotate(0deg)' },
+					'100%': { transform: 'translateX(300px) rotate(30deg)' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'scale-in': 'scale-in 0.2s ease-out',
+				'swipe-right': 'swipe 0.3s ease-out',
 			}
 		}
 	},
